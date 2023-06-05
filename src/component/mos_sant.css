@@ -1,0 +1,37 @@
+.boat {
+    background-color: red;
+}
+
+.main {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+}
+
+button {
+    width: 100px;
+    height: 30px; 
+    margin: 10px;   
+    border-radius: 15px;
+
+}
+
+@media(max-width:1050px) {
+    .main {
+        display: grid;
+        grid-template-rows: 1fr 2fr 1fr;
+        grid-template-columns: 1fr;
+    }
+
+    .firstend {
+        grid-row: 1/2;
+    }
+
+    .boat {
+        grid-row: 2/3;
+    }
+
+    .secondend {
+        grid-row: 3/4;
+        float: right;
+    }
+}
