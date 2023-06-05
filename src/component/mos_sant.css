@@ -1,5 +1,25 @@
+*{
+    margin: 0px;
+}
+
+.Rules {
+    background-color: aqua;
+}
+
 .boat {
     background-color: red;
+}
+
+.firstend {
+    background-color: blueviolet;
+}
+
+.secondend {
+    background-color: blue;
+}
+
+.lower_btn {
+    background-color: burlywood;
 }
 
 .main {
@@ -13,6 +33,11 @@ button {
     margin: 10px;   
     border-radius: 15px;
 
+}
+
+.heading {
+    align-items: center;
+    text-align: center;
 }
 
 @media(max-width:1050px) {
