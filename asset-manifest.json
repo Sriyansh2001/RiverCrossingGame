@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/RiverCrossingGame/static/css/main.2fed0bc3.css",
-    "main.js": "/RiverCrossingGame/static/js/main.a973018d.js",
+    "main.css": "/RiverCrossingGame/static/css/main.09f93286.css",
+    "main.js": "/RiverCrossingGame/static/js/main.03fe571b.js",
     "static/js/787.4444f3ee.chunk.js": "/RiverCrossingGame/static/js/787.4444f3ee.chunk.js",
     "index.html": "/RiverCrossingGame/index.html",
-    "main.2fed0bc3.css.map": "/RiverCrossingGame/static/css/main.2fed0bc3.css.map",
-    "main.a973018d.js.map": "/RiverCrossingGame/static/js/main.a973018d.js.map",
+    "main.09f93286.css.map": "/RiverCrossingGame/static/css/main.09f93286.css.map",
+    "main.03fe571b.js.map": "/RiverCrossingGame/static/js/main.03fe571b.js.map",
     "787.4444f3ee.chunk.js.map": "/RiverCrossingGame/static/js/787.4444f3ee.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2fed0bc3.css",
-    "static/js/main.a973018d.js"
+    "static/css/main.09f93286.css",
+    "static/js/main.03fe571b.js"
   ]
 }
