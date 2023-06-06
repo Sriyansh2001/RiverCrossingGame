@@ -33,11 +33,18 @@
     font-family:georgia,garamond,serif;
 }
 
+.inside_boat_object {
+    position: relative;
+    width: 140px;
+    height: 200px;
+    transition: all 0.8s;
+    transition-timing-function: ease-out;
+}
+
 .inside_boat {
     display: flex;
     align-items: center;
-    text-align: center;
-    justify-content: space-between;
+    text-align: center; 
     font-size: 30px;
     font-family:georgia,garamond,serif;
 }
@@ -45,6 +52,11 @@
 .img {
     width: 100px;
     cursor: pointer;
+    transition: all 1.0s;
+}
+
+.img:hover {
+    transform: scale(1.1);
 }
 
 .boat {
@@ -71,16 +83,26 @@
 }
 
 button {
-    width: 100px;
+    width: 110px;
     height: 30px; 
     margin: 10px;   
     border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.4s;
+}
 
+button:hover {
+    transform: scale(1.1);
 }
 
 .heading {
     align-items: center;
     text-align: center;
+}
+
+.one_more {
+    position: absolute;
+    right: 0;
 }
 
 @media(max-width:1050px) {
@@ -96,5 +118,17 @@ button {
     .pass {
         display: grid;
         top: 55%;
+    }
+    Button {
+        transition: none;
+    }
+    .img {
+        transition: none;
+    }
+    button:hover {
+        transform: none;
+    }
+    .img:hover {
+        transform: none;
     }
 }

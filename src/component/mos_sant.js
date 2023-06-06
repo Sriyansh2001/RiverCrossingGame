@@ -1,4 +1,5 @@
 import React , {useState} from 'react';
+import { useRef } from 'react';
 import './mos_sant.css';
 import monster_img from './monster.png';
 import saint_img from './saint.png'
@@ -12,9 +13,10 @@ export default function Mos_sant() {
     const [m_boat,change_m_boat] = useState(0);
     const [s_boat,change_s_boat] = useState(0);
     const [state_boat,change_state_boat] = useState(0);
+    const windowSize = useRef([window.innerWidth, window.innerHeight]);
 
     const [place,change_place] = useState({
-        float:"left"  
+        width:windowSize.current[0]>=1000?"10vw":"15vw"
     })
 
     // Pass the moster to the boat from left end of ground
@@ -53,9 +55,10 @@ export default function Mos_sant() {
         change_saint_right(saint_right-1);
     }
 
+    // Display Result in pop-up box
     function result() {
         if(monster_right+saint_right===6) {
-            alert("Congratulations You Solve the Game");
+            alert("Congratulations!!! You Won The Game");
         }
         else {
             alert("Game is Still On");
@@ -91,34 +94,35 @@ export default function Mos_sant() {
         if(m_boat+s_boat<=0) return ;
         if(state_boat===0) {
             change_state_boat(1);
-            // console.log(m_boat,monster_right,s_boat,saint_right);
             if(m_boat+monster_right > s_boat+saint_right && (saint_right!==0 || s_boat!==0)) {
-                alert("Game Over");
+                alert("Game Over! Please try again");
                 reset_all();
                 return ;
             }
             if(monster_left>saint_left && saint_left!==0) {
-                alert("Game Over");
+                alert("Game Over! Please try again");
                 reset_all();
                 return ;
             }
-            change_place({float:"right"});
-            // console.log()
+            change_place({
+                width: "45vw"
+            });
         }
         else {
             change_state_boat(0);
             if(m_boat+monster_left>s_boat+saint_left && (saint_left!==0 || s_boat!==0)) {
-                alert("Game Over");
+                alert("Game Over! Please try again");
                 reset_all();
                 return ;
             }
             if(monster_right>saint_right && saint_right!==0) {
-                alert("Game Over");
+                alert("Game Over! Please try again");
                 reset_all();
                 return ;
             }
-            // console.log(m_boat,monster_left,s_boat,saint_left,saint_left ,s_boat);
-            change_place({float:"left"});
+            change_place({
+                width:windowSize.current[0]>=1000?"10vw":"15vw"
+            });
         }
     }
 
@@ -131,7 +135,7 @@ export default function Mos_sant() {
         change_m_boat(0);
         change_s_boat(0);
         change_state_boat(0);
-        change_place({float:"left"});
+        change_place({width:windowSize.current[0]>=1000?"10vw":"15vw"});
     }
 
     return (
@@ -144,8 +148,8 @@ export default function Mos_sant() {
                 <ol>
                     <li>Capacity of boat is 2.</li>
                     <li>If monster is greater than saint at any end point you will loss the game.</li>
-                    <li>You Need to place all the 6 members to the finish end.</li>
-                    <li>After Pass all the monsters and saint please press Finish Button</li>
+                    <li>You Need to place all mosters and saints to the finish end.</li>
+                    <li>After Crossing all the monsters and saints please press Finish Button</li>
                 </ol>
                 <br></br>
             </div>
@@ -157,11 +161,13 @@ export default function Mos_sant() {
                 </div>
                 <div className="boat">
                     <div className='heading'><h2>Boat</h2></div><br></br>
-                    <div  style={place}>
-                        <div className='inside_boat'><img className='img' onClick={go_moster_back_to_ground} src={monster_img}></img> {m_boat} <br></br></div>
-                        <div className='inside_boat'><img className='img' onClick={go_saint_back_to_ground} src={saint_img}></img> {s_boat} <br></br></div>
+                    <div className='inside_boat_object'style={place} >
+                        <div className='one_more'>
+                            <div  className='inside_boat'><img className='img' onClick={go_moster_back_to_ground} src={monster_img}></img> {m_boat} <br></br></div>
+                            <div  className='inside_boat'><img className='img' onClick={go_saint_back_to_ground} src={saint_img}></img> {s_boat} <br></br></div>
+                        </div>
                     </div>
-                    <div className='pass'><button onClick={change_boat_ground}>Pass the boat </button> {state_boat===0?"Boat on Left End":"Boat on Right End"}</div>
+                    <div className='pass'><button onClick={change_boat_ground}>Cross The Boat </button> {state_boat===0?"Boat on Left End":"Boat on Right End"}</div>
                 </div>
                 <div className="secondend">
                     <div className='heading'><h2>Finish</h2></div><br></br>
