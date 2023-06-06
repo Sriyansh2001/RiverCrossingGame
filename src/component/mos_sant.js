@@ -1,5 +1,7 @@
 import React , {useState} from 'react';
 import './mos_sant.css';
+import monster_img from './monster.png';
+import saint_img from './saint.png'
 
 export default function Mos_sant() {
     // Initialization of all variables.
@@ -56,7 +58,7 @@ export default function Mos_sant() {
             alert("Congratulations You Solve the Game");
         }
         else {
-            alert("Game is Not finished");
+            alert("Game is Still On");
         }
     }
 
@@ -134,37 +136,41 @@ export default function Mos_sant() {
 
     return (
         <div>
+            <div className='title'>
+                <b>River Crossing Challenge</b>
+            </div>
             <div className='Rules'>
                 <h2>Description</h2>
                 <ol>
                     <li>Capacity of boat is 2.</li>
                     <li>If monster is greater than saint at any end point you will loss the game.</li>
                     <li>You Need to place all the 6 members to the finish end.</li>
+                    <li>After Pass all the monsters and saint please press Finish Button</li>
                 </ol>
                 <br></br>
             </div>
             <div className='main'>
                 <div className="firstend">
                     <div className='heading'><h2>Start</h2></div><br></br>
-                    <button className='btnmonster' onClick={go_moster_boat_left}>Monster :</button> {monster_left} <br></br>
-                    <button className='btnsaint' onClick={go_saint_boat_left}>Saint :</button> {saint_left} 
+                        <div className='inside_block'>  <img className='img' onClick={go_moster_boat_left} src={monster_img}></img> {monster_left} <br></br></div>
+                        <div className='inside_block'>  <img className='img' onClick={go_saint_boat_left} src={saint_img}></img> {saint_left} </div>
                 </div>
                 <div className="boat">
                     <div className='heading'><h2>Boat</h2></div><br></br>
                     <div  style={place}>
-                        <button className='btnmonster' onClick={go_moster_back_to_ground}> Moster : </button> {m_boat} <br></br>
-                        <button className='btnsaint' onClick={go_saint_back_to_ground}>Saint : </button> {s_boat} <br></br>
-                        <button onClick={change_boat_ground}>Pass : </button> {state_boat===0?"Boat on Left End":"Boat on Right End"}
+                        <div className='inside_boat'><img className='img' onClick={go_moster_back_to_ground} src={monster_img}></img> {m_boat} <br></br></div>
+                        <div className='inside_boat'><img className='img' onClick={go_saint_back_to_ground} src={saint_img}></img> {s_boat} <br></br></div>
                     </div>
+                    <div className='pass'><button onClick={change_boat_ground}>Pass the boat </button> {state_boat===0?"Boat on Left End":"Boat on Right End"}</div>
                 </div>
                 <div className="secondend">
                     <div className='heading'><h2>Finish</h2></div><br></br>
-                    <button className='btnmonster' onClick={go_moster_boat_right}>Monster : </button> {monster_right} <br></br>
-                    <button className='btnsaint' onClick={go_saint_boat_right}>Saint : </button> {saint_right}
+                    <div className='inside_block'><img className='img' onClick={go_moster_boat_right} src={monster_img}></img> {monster_right} <br></br></div>
+                    <div className='inside_block'><img className='img' onClick={go_saint_boat_right} src={saint_img}></img> {saint_right}</div>
                 </div>
             </div>
             <div className='lower_btn'>
-                <button onClick={result}>Check</button>
+                <button onClick={result}>Finish</button>
                 <button onClick={reset_all}>Reset</button>
             </div>
         </div>

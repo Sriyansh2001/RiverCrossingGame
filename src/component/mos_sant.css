@@ -2,29 +2,72 @@
     margin: 0px;
 }
 
+.title {
+    align-items: center;
+    text-align: center;
+    font-size: 25px;    
+    font-family:georgia,garamond,serif;
+    background-color: cyan;
+    height: 5vh;
+    padding: 2px;
+}
+
 .Rules {
-    background-color: aqua;
+    background-color: rgb(9, 242, 242);
+    height: 20vh;
+}
+
+.pass {
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    top: 80%;
+}
+
+.inside_block    {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+    font-size: 30px;
+    font-family:georgia,garamond,serif;
+}
+
+.inside_boat {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    font-size: 30px;
+    font-family:georgia,garamond,serif;
+}
+
+.img {
+    width: 100px;
+    cursor: pointer;
 }
 
 .boat {
-    background-color: red;
+    background-color: rgb(65, 65, 150);
 }
 
 .firstend {
-    background-color: blueviolet;
+    background-color:rgb(173, 69, 138);
 }
 
 .secondend {
-    background-color: blue;
+    background-color: rgb(173, 69, 138);
 }
 
 .lower_btn {
-    background-color: burlywood;
+    background: linear-gradient(110deg, #fdcd3b 60%, #ffed4b 60%);
+    height: 10vh;
 }
 
 .main {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
+    height: 65vh;
 }
 
 button {
@@ -41,22 +84,17 @@ button {
 }
 
 @media(max-width:1050px) {
+    .Rules {
+        height:25vh;
+    }
+    .img {
+        width: 40px;   
+    }
     .main {
+        height:60vh;
+    }
+    .pass {
         display: grid;
-        grid-template-rows: 1fr 2fr 1fr;
-        grid-template-columns: 1fr;
-    }
-
-    .firstend {
-        grid-row: 1/2;
-    }
-
-    .boat {
-        grid-row: 2/3;
-    }
-
-    .secondend {
-        grid-row: 3/4;
-        float: right;
+        top: 55%;
     }
 }
