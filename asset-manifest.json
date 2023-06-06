@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/RiverCrossingGame/static/css/main.2b23dd1e.css",
-    "main.js": "/RiverCrossingGame/static/js/main.eb0d949b.js",
+    "main.css": "/RiverCrossingGame/static/css/main.a264e2e8.css",
+    "main.js": "/RiverCrossingGame/static/js/main.13691a80.js",
     "static/js/787.4444f3ee.chunk.js": "/RiverCrossingGame/static/js/787.4444f3ee.chunk.js",
     "static/media/saint.png": "/RiverCrossingGame/static/media/saint.db4ef2e9e8af730e2c5d.png",
     "static/media/monster.png": "/RiverCrossingGame/static/media/monster.044988574bc60adc57d2.png",
     "index.html": "/RiverCrossingGame/index.html",
-    "main.2b23dd1e.css.map": "/RiverCrossingGame/static/css/main.2b23dd1e.css.map",
-    "main.eb0d949b.js.map": "/RiverCrossingGame/static/js/main.eb0d949b.js.map",
+    "main.a264e2e8.css.map": "/RiverCrossingGame/static/css/main.a264e2e8.css.map",
+    "main.13691a80.js.map": "/RiverCrossingGame/static/js/main.13691a80.js.map",
     "787.4444f3ee.chunk.js.map": "/RiverCrossingGame/static/js/787.4444f3ee.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2b23dd1e.css",
-    "static/js/main.eb0d949b.js"
+    "static/css/main.a264e2e8.css",
+    "static/js/main.13691a80.js"
   ]
 }
